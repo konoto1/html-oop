@@ -75,11 +75,14 @@ export class Car {
             return 'Negalima pilti kuro esant ijungtam varikliui';
         }
         const kiekKuroTelpa = `${(parseFloat(this.fuelTankCapacity) - parseFloat(this.fuelLeft)).toFixed(2)}ltr`;
-        if (kiekKuroTelpa === '0ltr') {
+        if (kiekKuroTelpa === '0.00ltr') {
             return 'Kuro bakas pilnas';
         }
         if (a > parseFloat(kiekKuroTelpa)) {
             return `Galima uzpilti nedaugiau kaip ${kiekKuroTelpa}`;
+        }
+        if (`${a}` === 'NaN') {
+            return 'Ivestas neatpazintas kuro kiekis';
         }
         if (a === 0) {
             return `Kuro neipilta`;

@@ -1,6 +1,8 @@
-export class Automobile {
+import { MotorVehicle } from "./MotorVehicle.js";
+
+export class Automobile extends MotorVehicle {
     constructor(name) {
-        this.name = name;
+        super(name);
         this.vehicleType = '';
         this.power = 500;
         this.cylinders = 1;
@@ -13,6 +15,6 @@ export class Automobile {
     }
 
     about() {
-        return `${this.name}: has ${this.power} hp and ${this.cylinders} cylinder engine!! ${this.emoji.repeat(this.emojiCount)}`;
+        return `${this.name}: has ${this.power} hp and ${this.cylinders} cylinder ${this.engineType} engine!! ${this.emoji.repeat(this.emojiCount)}`;
     }
 };

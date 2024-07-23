@@ -6,6 +6,7 @@ import { GoldenFish } from "./inheritance/GoldenFish.js";
 import { Dolphin } from "./inheritance/Dolphin.js";
 import { Eagle } from "./inheritance/Eagle.js";
 import { Pigeon } from "./inheritance/Pigeon.js";
+import { Crane } from "./inheritance/Crane.js";
 
 const rexas = new Dog('Rex');
 console.log(rexas.intro());
@@ -38,3 +39,7 @@ console.log(eagle.voice());
 const pigeon = new Pigeon('Duke');
 console.log(pigeon.intro());
 console.log(pigeon.voice());
+
+const crane = new Crane('Grus grus');
+console.log(crane.intro());
+console.log(crane.voice());
